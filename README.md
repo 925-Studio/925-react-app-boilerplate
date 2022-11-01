@@ -9,7 +9,7 @@ A React app boilerplate tweaked🛠 by 925 Studio.
 - [React](https://reactjs.org/)
 - [React Router 6.x](https://reactrouter.com/)
 - [styled-components 5.x](https://styled-components.com/)
-- Auto Theme (Custom hook🪝 included)
+- Auto/Custom Theme (Custom hook🪝 included)
 - Auto Viewport Size (Custom hook🪝 included)
 
 ## Installation
