@@ -1,6 +1,6 @@
 /* --------------------------------- IMPORT --------------------------------- */
 // Hooks
-import { useViewport, useTheme } from './hooks/_index.js'
+import { useViewport, useAutoTheme } from './hooks/_index.js'
 // Plugins
 import styled, { ThemeProvider } from 'styled-components'
 // Styles
@@ -10,7 +10,7 @@ import { GlobalStyles, Theme } from './GlobalStyles'
 export default function App() {
   // GET VIEWPORT SIZE AND THEME BY USING HOOKS
   const viewportSize = useViewport()
-  const theme = useTheme()
+  const theme = useAutoTheme()
 
   // APP
   return (

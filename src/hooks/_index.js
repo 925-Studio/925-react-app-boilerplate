@@ -1,6 +1,6 @@
 /* --------------------------------- IMPORT --------------------------------- */
-import useViewport from './useViewport.js'
-import useTheme from './useTheme.js'
+import useViewport from './useViewport'
+import useAutoTheme from './useAutoTheme'
 
 /* --------------------------------- EXPORT --------------------------------- */
-export { useViewport, useTheme }
+export { useViewport, useAutoTheme }
