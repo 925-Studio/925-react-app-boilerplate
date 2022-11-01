@@ -1,6 +1,6 @@
 /* --------------------------------- IMPORT --------------------------------- */
 import useViewport from './useViewport'
-import useAutoTheme from './useAutoTheme'
+import useTheme from './useTheme'
 
 /* --------------------------------- EXPORT --------------------------------- */
-export { useViewport, useAutoTheme }
+export { useViewport, useTheme }

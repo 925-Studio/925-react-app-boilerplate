@@ -2,24 +2,32 @@
 import { useState, useEffect } from 'react'
 
 /* ---------------------------------- HOOK ---------------------------------- */
-export default function useAutoTheme() {
+export default function useTheme(auto, mode) {
   const checkTheme = () => window.matchMedia('(prefers-color-scheme: dark)')
 
-  const [theme, setTheme] = useState(checkTheme().matches ? 'dark' : 'light')
+  const [autoTheme, setAutoTheme] = useState(
+    checkTheme().matches ? 'dark' : 'light'
+  )
+  const [userTheme, setUserTheme] = useState(undefined)
 
   useEffect(() => {
     const chooseTheme = (e) => {
       if (e.matches) {
-        setTheme('dark')
+        setAutoTheme('dark')
       } else {
-        setTheme('light')
+        setAutoTheme('light')
       }
     }
 
-    checkTheme().addEventListener('change', (e) => chooseTheme(e))
+    if (auto) {
+      checkTheme().addEventListener('change', (e) => chooseTheme(e))
+    }
+    if (!auto) {
+      setUserTheme(mode)
+    }
 
     return () => checkTheme().removeEventListener('change', chooseTheme)
-  }, [])
+  }, [auto, mode])
 
-  return theme
+  return auto ? autoTheme : userTheme
 }
