@@ -44,6 +44,8 @@ export default function App() {
           THEME MODE
         </Button>
 
+        <Text>Texts below will be stored in local storage.</Text>
+
         <Input
           type='text'
           placeholder='Enter your name'
