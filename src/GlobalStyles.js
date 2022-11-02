@@ -30,21 +30,27 @@ const GlobalStyles = createGlobalStyle`
 /* Theme */
 const Theme = {
   light: {
-    backgroundColor: '#E0FBFC',
-    textColor: '#293241',
+    color: {
+      background: '#e0fbfc',
+      text: '#293241',
 
-    primaryColor: '#98C1D9',
-    secondaryColor: '#293241',
-    accentColor: '#EE6C4D',
+      primary: '#98c1d9',
+      secondary: '',
+      accent: '#ee6c4d',
+      warning: '',
+    },
   },
 
   dark: {
-    backgroundColor: '#293241',
-    textColor: '#E0FBFC',
+    color: {
+      background: '#293241',
+      text: '#e0fbfc',
 
-    primaryColor: '#3D5A80',
-    secondaryColor: '#E0FBFC',
-    accentColor: '#EE6C4D',
+      primary: '#3d5a80',
+      secondary: '',
+      accent: '#ee6c4d',
+      warning: '',
+    },
   },
 }
 

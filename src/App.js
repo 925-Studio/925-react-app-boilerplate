@@ -38,7 +38,7 @@ export default function App() {
         <Button
           onClick={() => {
             setAutoTheme(!autoTheme)
-            setUserTheme(userTheme === 'dark' ? 'dark' : 'light')
+            setUserTheme(theme === 'dark' ? 'light' : 'dark')
           }}
         >
           THEME MODE
@@ -72,7 +72,7 @@ const styles = {
     width: 100vw;
     height: ${({ $height }) => $height + 'px'};
 
-    background-color: ${({ theme }) => theme.backgroundColor};
+    background-color: ${({ theme }) => theme.color.background};
   `,
 
   Title: styled.h1`
@@ -80,7 +80,7 @@ const styles = {
 
     font-size: 64px;
     text-align: center;
-    color: ${({ theme }) => theme.accentColor};
+    color: ${({ theme }) => theme.color.accent};
   `,
 
   Text: styled.h1`
@@ -88,7 +88,7 @@ const styles = {
 
     font-size: 32px;
     text-align: center;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.color.text};
   `,
 
   Button: styled.button`
