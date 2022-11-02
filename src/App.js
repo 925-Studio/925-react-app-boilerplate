@@ -2,7 +2,7 @@
 // Cores
 import { useState } from 'react'
 // Hooks
-import { useViewport, useTheme } from './hooks/_index.js'
+import { useViewport, useTheme, useLocalStorage } from './hooks/_index.js'
 // Plugins
 import styled, { ThemeProvider } from 'styled-components'
 // Styles
@@ -17,6 +17,9 @@ export default function App() {
   const [autoTheme, setAutoTheme] = useState(true)
   const [userTheme, setUserTheme] = useState(undefined)
   const theme = useTheme(autoTheme, userTheme)
+
+  /* LOCAL STORAGE */
+  const [name, setName] = useLocalStorage('name', '925 Studio')
 
   /* APP */
   return (
@@ -40,6 +43,13 @@ export default function App() {
         >
           THEME MODE
         </Button>
+
+        <Input
+          type='text'
+          placeholder='Enter your name'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
       </Wrapper>
     </ThemeProvider>
   )
@@ -80,8 +90,15 @@ const styles = {
   `,
 
   Button: styled.button`
+    margin-bottom: 32px;
     padding: 16px;
+  `,
+
+  Input: styled.input`
+    padding: 8px;
+
+    text-align: center;
   `,
 }
 
-const { Wrapper, Title, Text, Button } = styles
+const { Wrapper, Title, Text, Button, Input } = styles

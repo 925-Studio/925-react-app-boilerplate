@@ -11,6 +11,7 @@ A React app boilerplate tweaked🛠 by 925 Studio.
 - [styled-components 5.x](https://styled-components.com/)
 - Auto/Custom Theme (Custom hook🪝 included)
 - Auto Viewport Size (Custom hook🪝 included)
+- Local Storage Hook🪝
 
 ## Installation
 
