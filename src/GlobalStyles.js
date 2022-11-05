@@ -11,7 +11,6 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
 
     box-sizing: border-box;
-    overflow: hidden;
     
     font-display: optional;
     text-rendering: optimizeSpeed;
