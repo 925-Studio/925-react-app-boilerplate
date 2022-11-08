@@ -14,11 +14,6 @@ const GlobalStyles = createGlobalStyle`
     
     font-display: optional;
     text-rendering: optimizeSpeed;
-
-    transition-property: background-color,
-                         transform;
-    transition-duration: 0.2s;
-    transition-timing-function: cubic-bezier(0.25, 0, 0.5, 1);
   }
 
   *:focus {
